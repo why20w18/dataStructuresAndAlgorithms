@@ -1,5 +1,6 @@
 
 
+
 public class linkedList {
     
     node head = null;
@@ -63,12 +64,42 @@ public class linkedList {
             System.out.println(index+". indexe dugum eklendi ! ");
         }
         else{
-            //simdi tail degerini kontrol edecegiz
+            //simdi tail degerini kontrol edecegiz bu yuzden son index lazim
+            
+            node temp = head;
+            node temp2 = head;
+            int cx = 0;
+            while(temp != null){
+                cx++; //index degerini tutamadim cunku 1'den baslar dongunun kac kere calistigini gosterir
+                temp2 = temp; //temp son dugume gecmeden ben temp2'ye sondan onceki dugumu kopyaladim
+                temp = temp.next; //temp burada son dugumu tutuyor artik
+            }
+            if(index == cx){ //baglama islemlerini yapacagiz
+                temp2.next = eleman;
+                eleman.next = temp;
+            }
+            else{ //araya ekleme bu kisimda yapilacak
+                temp = head;
+                temp2 = head;
+                int i = 0;
+                while(i < index){
+                    i++;
+                    temp2 = temp;
+                    temp = temp.next;
+                }
+                temp2.next = eleman;
+                eleman.next = temp;
+                
+                System.out.println(index+".indexe "+x+" degeri eklendi !");
+
+                
+                
+                
+            }
+            
             
             
         }
-        
-        
         
     }
     
@@ -84,3 +115,4 @@ public class linkedList {
     }
     
 }
+
