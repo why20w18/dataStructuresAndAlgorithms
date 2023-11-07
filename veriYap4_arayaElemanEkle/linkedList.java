@@ -35,7 +35,7 @@ public class linkedList {
             System.out.println("liste olustu , sona dugum eklendi ! ");
         }
         else{
-            eleman.next = null;
+            tail.next = eleman; //eğer zaten liste olustuysa tail değeri vardır bu yuzden tailin ilerisi diyebiliriz
             tail = eleman;
             System.out.println("sona dugum eklendi ! ");
         }
@@ -48,7 +48,7 @@ public class linkedList {
     void yazdir(){
         node temp = head;
         
-        System.out.print("head");
+        System.out.print("head-->");
         while(temp != null){
             System.out.print(temp.sayi+"-->");
             temp = temp.next;
