@@ -41,7 +41,34 @@ public class linkedList {
         }
         
     }
-    void arayaEkle(int index , int x){
+    void arayaEkle(int index , int x){ //girilen indexe göre ekleme yapilacaktir
+        //dugum olusturarak baslariz 
+        node eleman = new node();
+        eleman.sayi = x;
+        /*araya ekleme yaparken 3 ozel durum var
+          1-head kontrolü : indexi heade mi giriyor
+          2-tail kontrolü : indexi taile mi giriyor
+          3-araya ekleme  : indexi araya mı giriyor
+        */
+        if(head == null && index == 0){ //liste yoksa kullanici indexe sadece sifir girebilir
+            //headin eskiden oldugu indexe ekleme yapacağız basa ekleme degildir
+            eleman.next = null; //biz burada direkt headin oldugu konuma yerlestirmek istiyoruz o yuzden null yazdik
+            head = eleman; //headin onune degil dogrudan oldugu yere ekleme yapacağız
+            tail = eleman;
+            System.out.println("liste olustu ve "+index+". indexe dugum eklendi ! ");
+        }
+        else if(head != null && index == 0){ //liste varsa ve index sifirsa
+            eleman.next = head;
+            head = eleman;
+            System.out.println(index+". indexe dugum eklendi ! ");
+        }
+        else{
+            //simdi tail degerini kontrol edecegiz
+            
+            
+        }
+        
+        
         
     }
     
