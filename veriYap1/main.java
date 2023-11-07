@@ -12,10 +12,18 @@ public class main {
         
         //düğümlere değer atayacağım benim düğümlerim isim ve yaş tutacak (String ve Integer)
         
+        A.isim = "ali";
+        A.yas  = 15;
+        B.isim = "veli";
+        B.yas  = 16;
+        C.isim = "ahmet";
+        C.yas  = 17;
+        //-->düğümlerim artık içinde veri tutuyor
+           
+        //nodelerimi birbirine node classında tanımladığım next işaretçisi ile bağlayacağım
         
-        
+                
         
     }
     
 }
-
