@@ -19,6 +19,12 @@ public class main {
         listem.yazdir();
         
         
-    }
+        System.out.println("\n\nhead:"+listem.head.sayi);  
+        System.out.println("tail:"+listem.tail.sayi);
+        
+
+        
+    }//OUTPUT:
+    //head-->45-->11-->15-->8-->44-->35-->55-->tail
     
 }
