@@ -1,6 +1,5 @@
 
 
-
 public class linkedList {
     
     node head = null;
@@ -115,4 +114,3 @@ public class linkedList {
     }
     
 }
-
