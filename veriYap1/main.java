@@ -22,6 +22,17 @@ public class main {
            
         //nodelerimi birbirine node classında tanımladığım next işaretçisi ile bağlayacağım
         
+        A.next = B;
+        B.next = C;
+        C.next = null; //son düğüm hiçbir yere bağlanmaz TAIL
+        
+        //nodelerimi ekrana bastiracagim dongu yardimiyla
+        
+        node temp = A; //baştaki düğüme atayacağım geçiciyi
+        while(temp != null){ //son düğüme gidene kadar çalışacak
+            System.out.println("isim:"+temp.isim + " yasi:"+temp.yas);
+            temp = temp.next; //temp her döngüde ileri gidecek şekilde güncellenecek
+        }
                 
         
     }
