@@ -39,6 +39,69 @@ public class linkedList{
         }
         
     }
+    //index değerine göre ekleme yapsın
+    void arayaEkle(int index , int data){
+        
+        node eleman = new node(data);
+        
+        if(head == null){ //liste yoksa dugum olustur , liste yoksa indexin onemi yok ilk liste olusacak
+            head = eleman;
+            tail = eleman;
+            System.out.println("liste olusturuldu : arayaEkle");
+        }
+        else if(head != null && index == 0){
+        //basa ekleme yapacağız
+            eleman.next = head;
+            head.prev = eleman;
+            head = eleman;
+            System.out.println("basa eklendi : arayaEkle");
+        }
+        else{ //sona ekleme ve araya ekleme
+            //sona ekleme için sonuncunun indexini bulmaliyiz
+            int cx = 0;
+            node temp = head; //baştan next ile bağlayarak gitcem
+            //node temp2 = head; // çift yönlüde temp2 tanımlamaya gerek yok
+            while(temp.next != null){
+                temp = temp.next;
+                cx++;
+            }
+            //tail için indexi buradan tutarız tailin
+            
+            //tempi sadece son indexi bulmak icin kullandim
+            if(index > cx){ //indeximiz son degere esit olmayacak ki direkt son degere atama yapamasin
+                            //taili ileri kaydiracagiz ve elemani tail yerine kaydedeceğiz
+            /*tail.next = eleman;
+            eleman.prev = tail;
+            tail = eleman;
+            */
+            eleman.next = temp;
+            temp.prev = eleman;
+            tail = temp;
+            
+            System.out.println("sona dugum eklendi : arayaEkle ");
+            }
+            else{
+                //araya ekleme
+                //indis bulacagiz girilene kadar gideceğiz
+                
+                int cxx = 0;
+                temp = head;
+                while(index != cxx){
+                    temp = temp.next;
+                    cxx++;
+                }
+                eleman.prev = temp.prev;
+                temp.prev.next = eleman;
+                
+                eleman.next = temp;
+                temp.prev = eleman;
+                
+            }
+            
+            
+        }
+        
+    }
     
     //yazdir metoduyla yazdirabilmemizin sebebi next ile dugumleri birbirine baglamakti
     //prev ile yazdirmak istiyorsak dugumleri yine birbirine baglamak zorundayiz
