@@ -22,6 +22,24 @@ public class linkedList{
         }
         
     }
+    void sonEkle(int data){
+        
+        node eleman = new node(data);
+        
+        if(head == null){ //liste boşsa ilk dugumu olustur hem head hem taildir
+            head = eleman;
+            tail = eleman;
+            System.out.println("liste olusturuldu ! : sonEkle ");
+        }
+        else{
+            tail.next = eleman;
+            eleman.prev = tail;
+            tail = eleman;
+            System.out.println("sona eklendi : sonEkle ");
+        }
+        
+    }
+    
     //yazdir metoduyla yazdirabilmemizin sebebi next ile dugumleri birbirine baglamakti
     //prev ile yazdirmak istiyorsak dugumleri yine birbirine baglamak zorundayiz
     void duzYazdir(){
