@@ -102,6 +102,39 @@ public class linkedList{
         }
         
     }
+    void basSil(){
+        
+        if(head != null){ //listede eleman yoksa silmeye gerek yoktur zaten
+            
+            if(head.next == null){ //listede bir eleman varsa onu sileceğiz
+                head = null;
+                tail = null;
+                System.out.println("listedeki tek elemanda silindi !");
+            }
+            else{ //listede birden fazla eleman varsa
+                head = head.next; //headi kaydırırız çünkü artık onu sileceğiz
+                head.prev = null; //yeni head değerinden geri gidip siliyoruz eski headi
+            }
+            
+        }
+        
+    }
+    
+    void sonSil(){
+        
+        if(head != null){ //sadece dolu listeleri aldik
+            
+            if(head.next == null){  //tek eleman varsa sil bunu anlamak için headin ilerisi null mu diye bakariz
+             head = null;
+             tail = null;
+                
+            }
+            else{ //birden fazla elemanda
+                tail = tail.prev;  //taili sileceğiz o yuzden 1 gerisini tail belirledik
+                tail.next = null; //yeni tailin ilerisindeki dugum null diyerek sildik   
+            }
+        }
+    }
     
     //yazdir metoduyla yazdirabilmemizin sebebi next ile dugumleri birbirine baglamakti
     //prev ile yazdirmak istiyorsak dugumleri yine birbirine baglamak zorundayiz
@@ -119,7 +152,7 @@ public class linkedList{
         
     }
     
-    void tersYazdi(){ //tersten yazdiracaksin
+    void tersYazdir(){ //tersten yazdiracaksin
         int cx = 0;
         node temp = tail;
         
