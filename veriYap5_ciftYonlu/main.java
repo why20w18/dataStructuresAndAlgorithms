@@ -5,6 +5,16 @@ public class main{
     
     public static void main(String[] args){
      
+        //metodlarıma erişebilmek için referans üzerinden nesne tanımlayacağım
+        linkedList listem = new linkedList();
+        
+        listem.basEkle(10);
+        listem.basEkle(20);
+        listem.basEkle(30);
+        
+        listem.duzYazdir();
+        listem.tersYazdi();
+        
         
         
         
