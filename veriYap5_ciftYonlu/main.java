@@ -11,6 +11,8 @@ public class main{
         listem.basEkle(10);
         listem.basEkle(20);
         listem.basEkle(30);
+        listem.sonEkle(40);
+        listem.sonEkle(50);
         
         listem.duzYazdir();
         listem.tersYazdi();
