@@ -38,6 +38,17 @@ public class linkedList{
         
     }
     
+    void tersYazdi(){ //tersten yazdiracaksin
+        int cx = 0;
+        node temp = tail;
+        
+        System.out.print("tail->");
+        while(temp != null){
+            System.out.print(temp.data+"->");
+            temp = temp.prev;
+        }
+        System.out.print("head\n");
+    }
     
     
 }
