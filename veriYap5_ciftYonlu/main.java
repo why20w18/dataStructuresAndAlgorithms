@@ -16,11 +16,21 @@ public class main{
         listem.arayaEkle(4, 98);
         listem.arayaEkle(5, 17);
         //head->25->41->15->31->98->17->55->tail
-        //head->25->41->15->31->98->17->55->tail
+        //tail->55->17->98->31->15->41->25->head
         listem.arayaEkle(0, 21);
+        //head->21->25->41->15->31->98->17->55->tail
+        //tail->55->17->98->31->15->41->25->21->head
+        listem.basEkle(59);
+        //head->59->21->25->41->15->31->98->17->55->tail
+        //tail->55->17->98->31->15->41->25->21->59->head
+        
+        listem.basSil(); //head->21->25->41->15->31->98->17->55->tail
+        listem.sonSil(); //head->21->25->41->15->31->98->17->tail
+        listem.basSil(); //head->25->41->15->31->98->17->tail
+        
         System.out.println();
         listem.duzYazdir();
-        listem.tersYazdi();
+        listem.tersYazdir();
        
         System.out.println();
         System.out.println("head:"+listem.head.data);
