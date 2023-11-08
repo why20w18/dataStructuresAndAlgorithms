@@ -14,11 +14,12 @@ public class main{
         listem.sonEkle(40);
         listem.sonEkle(50);
         
+        System.out.println();
         listem.duzYazdir();
         listem.tersYazdi();
-        
-        
-        
-        
+       
+        System.out.println();
+        System.out.println("head:"+listem.head.data);
+        System.out.println("tail:"+listem.tail.data);
     }
 }
