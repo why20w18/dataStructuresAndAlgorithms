@@ -8,12 +8,16 @@ public class main{
         //metodlarıma erişebilmek için referans üzerinden nesne tanımlayacağım
         linkedList listem = new linkedList();
         
-        listem.basEkle(10);
-        listem.basEkle(20);
-        listem.basEkle(30);
-        listem.sonEkle(40);
-        listem.sonEkle(50);
-        
+        listem.arayaEkle(0, 15);
+        listem.sonEkle(55);
+        listem.arayaEkle(0, 25);
+        listem.arayaEkle(2, 31);
+        listem.arayaEkle(1, 41);
+        listem.arayaEkle(4, 98);
+        listem.arayaEkle(5, 17);
+        //head->25->41->15->31->98->17->55->tail
+        //head->25->41->15->31->98->17->55->tail
+        listem.arayaEkle(0, 21);
         System.out.println();
         listem.duzYazdir();
         listem.tersYazdi();
