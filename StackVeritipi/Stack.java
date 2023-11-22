@@ -6,7 +6,7 @@ public class Stack {
     int size;
     int index;
     
-    public StackYigin(int size){
+    public Stack(int size){
         this.size = size;
         dizi = new int[size];
         index = -1; //ekleme yapinca direkt 0.indexi gosterecek
