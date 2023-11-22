@@ -4,7 +4,7 @@ public class Stack {
     
     int dizi[]; 
     int size;
-    int index;
+    int index; //topOfStack = tepenin indexini takip eder
     
     public Stack(int size){
         this.size = size;
