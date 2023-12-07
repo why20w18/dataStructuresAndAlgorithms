@@ -1,9 +1,6 @@
 /*
 head prev ile taili gösterir
 tail next ile headi gösterir
-toplam 4 bacak bağlanmalıdır 4 adet prev ve next bunu asla atlamayacağız
-İLK ÖNCE HER ZAMAN NEXT İLERİ GİDİŞ YAPILIR SONRA ALTINA PREV YAPILIR
-araya eklemede sona eklemeyi beceremedik
 */
 
 public class linkedList {
@@ -18,7 +15,7 @@ public class linkedList {
         if(head == null){
             head = eleman;
             tail = eleman;
-            //4 bacak bağlandı
+            
             head.next = tail;
             tail.prev = head;
             head.prev = tail;
@@ -29,7 +26,6 @@ public class linkedList {
             eleman.next = head;
             head.prev = eleman;
             head = eleman;
-            //yukarıda 2 bacak bağlandı aşağıda 2 bacak daha bağlar toplam 4 bacak bağlamış olurum
             
             tail.next = head;
             head.prev = tail;
@@ -52,7 +48,7 @@ public class linkedList {
         else{
             tail.next = eleman;
             eleman.prev = tail;
-            //2 bacak baglandi
+            
             tail = eleman;
             
             tail.next = head;
@@ -91,8 +87,8 @@ public class linkedList {
                 i++;
                 temp2 = temp;
                 temp = temp.next;
-            }//tail kullandığımızdan sondan önceki temp 
-            if(i <= index){//dairesel olmayandakinin aynısını yapıyoru
+            } 
+            if(i <= index){
                 eleman.next = temp.next;
                temp.prev.next = eleman;
                tail = temp.next;
